@@ -1,0 +1,124 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin-bottom: 90px;
+	background-image: url("../img/nyt_building.jpg");
+}
+
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	background-color: rgba(234, 255, 0, 0.872);
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.jumbotron {
+	background: linear-gradient (#333, black);
+	position: relative;
+	margin-top: 20px;
+	width: 100%;
+	height: 500px;
+	opacity: 0.8;
+	font-family: "Cormorant SC";
+	padding: 0;
+	box-shadow: 10px 5px 20px 2px lightslategrey;
+}
+
+.jumbotron .caption {
+	position: absolute;
+	top: 30%;
+	width: 100%;
+	text-align: center;
+}
+
+.jumbotron h1 {
+	font-weight: 800;
+	font-size: 80px;
+	color: rgba(0, 0, 0, 0.427);
+}
+
+.jumbotron p {
+	font-size: 30px;
+	color: rgba(0, 0, 0, 0.427);
+}
+
+.panel {
+	border-radius: 0;
+	box-shadow: 3px 3px 20px lightslategrey;
+}
+
+.panel-heading {
+	background-color: #114798;
+	color: white;
+	padding-bottom: 10px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+.panel .panel-default .panel-body {
+	font-size: 16px;
+}
+
+.footer {
+	background-color: rgba(0, 187, 255, 0.79);
+	color: white;
+}
+
+.footer .container p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	font-weight: 800;
+	background: #0c7cd5;
+	padding: 5px;
+}
+
+.navbar-inverse .navbar-nav .scrape-new:hover {
+	background: #4caf50;
+}
+
+.navbar-inverse .navbar-nav .scrape-new:active {
+	background: #8e373a;
+}
+
+.scrape-new {
+	cursor: cell; 
+}
+
+.m-top-80 {
+	margin-top: 83px;
+}
+
+textarea {
+	resize: none;
+	padding: 12px;
+}
+
+.btn {
+	float: right;
+	
+}
+
+.note .list-group-item {
+	padding: 32px;
+}
+
+.note .list-group-item {
+	position: relative;
+	bottom: 9px;
+}
