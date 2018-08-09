@@ -1,22 +1,22 @@
 
 
-var Note = require("../models/note");
+var note = require("../models/note");
 var dates = require("../scripts/date");
 
 module.exports = {
 	get: function(data, cb) {
-		Note.find({
+		note.find({
 			_headlineId: data._id
 		}, cb);
 	},
 	save: function(data, cb) {
-		var newNote = {
+		var newnote = {
 			_headlineId: data._id,
 			date: makeDate(),
 			noteText: data.noteText
 		};
 
-		Note.create(newNote, function (err, doc) {
+		note.create(newnote, function (err, doc) {
 			if (err) {
 				console.log(err);
 			} else {
@@ -26,7 +26,7 @@ module.exports = {
 		});
 	},
 	delete: function(data, cb) {
-		Note.remove({
+		note.remove({
 			_id: data._id
 		}, cb);
 	}

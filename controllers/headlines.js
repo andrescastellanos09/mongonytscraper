@@ -1,6 +1,6 @@
 // module scripts
 var scrape = require("../scripts/scrape");
-var dates = require("../scripts/date");
+var makeDate = require("../scripts/date");
 
 // models
 var headline = require("../models/headline");
@@ -14,16 +14,16 @@ module.exports = {
 				articles[i].saved = false;
 			}
 
-			Headline.collection.insertMany(articles, {ordered: false}, function(err, docs) {
+			headline.collection.insertMany(articles, {ordered: false}, function(err, docs) {
 				cb(err, docs);
 			});
 		});
 	},
 	delete: function(query, cb) {
-		Headline.remove(query, cb);
+		headline.remove(query, cb);
 	},
 	get: function(query, cb) {
-		Headline.find(query)
+		headline.find(query)
 		.sort({
 			_id: -1
 		})
@@ -32,7 +32,7 @@ module.exports = {
 		});
 	},
 	update: function(query, cb) {
-		Headline.update({_id: query._id}, {
+		headline.update({_id: query._id}, {
 			$set: query
 		}, {}, cb);
 	}

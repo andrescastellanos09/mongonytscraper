@@ -1,7 +1,7 @@
 // Server routes
 var scrape = require("../scripts/scrape");
-var headlineController = require("../controller/headline");
-var noteController = require("../controller/note");
+var headlineController = require("../controllers/headlines");
+var noteController = require("../controllers/notes");
 
 module.exports = function(router) {
 	router.get("/", function(req, res) {

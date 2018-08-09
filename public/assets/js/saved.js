@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 	function initPage() {
 		articleContainer.empty();
-		$.get("/api/headlines?saved=true").then(function(data) {
+		$.get("/api/headline?saved=true").then(function(data) {
 				if (data && data.length) {
 					renderArticles(data);
 				} else {
@@ -96,7 +96,7 @@ $(document).ready(function() {
 		articleToDelete.saved = true;
 		$.ajax({
 			method: "DELETE",
-			url: "/api/headlines/" + articleToDelete._id
+			url: "/api/headline/" + articleToDelete._id
 		}).then(function(data){
 			if (data.ok) {
 				initPage();
